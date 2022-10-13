@@ -16,8 +16,8 @@ public class Persona implements Serializable{
     private long id;
     
     private String nombre;
-    private String apellidos1;
-    private String apellidos2;
+    private String apellido1;
+    private String apellido2;
     private String telefono;
     private String email;
     
@@ -41,22 +41,22 @@ public class Persona implements Serializable{
         this.nombre = nombre;
     }
 
-    public String getApellidos1() {
-        return apellidos1;
+    public String getApellido1() {
+        return apellido1;
     }
 
-    public void setApellidos1(String apellidos1) {
-        this.apellidos1 = apellidos1;
+    public void setApellido1(String apellido1) {
+        this.apellido1 = apellido1;
     }
 
-    public String getApellidos2() {
-        return apellidos2;
+    public String getApellido2() {
+        return apellido2;
     }
 
-    public void setApellidos2(String apellidos2) {
-        this.apellidos2 = apellidos2;
+    public void setApellido2(String apellido2) {
+        this.apellido2 = apellido2;
     }
-
+    
     public String getTelefono() {
         return telefono;
     }
@@ -73,4 +73,11 @@ public class Persona implements Serializable{
         this.email = email;
     }
     
+    public Pais getPais() {
+        return pais;
+    }
+
+    public void setPais(Pais pais) {
+        this.pais = pais;
+    }
 }

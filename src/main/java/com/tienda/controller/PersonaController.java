@@ -42,7 +42,7 @@ public class PersonaController {
     public String editarPersona(@PathVariable("id") Long idPersona, Model model){
         Persona persona = personaService.getPersonaById(idPersona);
         List<Pais> listaPaises = paisService.listCountry();
-        model.addAttribute("personas", persona);
+        model.addAttribute("persona", persona);
         model.addAttribute("paises", listaPaises);
         return "crear";
     }
