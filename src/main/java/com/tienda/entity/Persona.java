@@ -9,7 +9,7 @@ import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "presona")
+@Table(name = "personas")
 public class Persona implements Serializable{
     @Id
     @GeneratedValue(strategy= GenerationType.IDENTITY)
