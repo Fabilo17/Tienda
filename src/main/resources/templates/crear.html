@@ -13,8 +13,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
                 <div class="container">
                     <form th:object = "${persona}"
                           th:action="@{/save}"
-                          method="POST"
-                  >
+                          method="POST">
                 <input type="hidden" th:field="*{id}">
                 <div class="form-group mb-3 row">
                     <label  class="col-md-2 col-form-label" for="nombre">Nombre</label>
