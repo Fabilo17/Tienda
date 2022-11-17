@@ -3,9 +3,10 @@
 Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
 Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this template
 -->
-<html>
+<html xmls:th="http://www.thymeleaf.org"
+      xmls:sec="http://thymeleaf.org/extras/spring-security">
     <head th:fagment="head">
-        <title>TODO supply a title</title>
+        <title>Mi Tienda</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
@@ -23,6 +24,12 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
           <a class="nav-link active" aria-current="page" href="#">Home</a>
+        </li>
+        <li sec:authorize="isAuthenticated()" class="nav-item">
+            <a class="nav-link" href="#" th:href="@{~/profile/index}">Profile</a>
+        </li>
+        <li sec:authorize="hasRole('ROLE_USER')" class="nav-item">
+            <a class="nav-link" href="#" th:href="@{~/admin/index}">User</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#">Link</a>
